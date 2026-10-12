@@ -61,5 +61,5 @@ resource "google_cloud_run_v2_service_iam_member" "backend_publico" {
   name     = google_cloud_run_v2_service.backend.name
   location = google_cloud_run_v2_service.backend.location
   role     = "roles/run.invoker"
-  member   = "serviceAccount:${google_service_account.backend.email}"
+  member   = "allUsers"
 }
